@@ -1,28 +1,39 @@
-CoolDemo
+Chart Configruer
 ========================================================
-author: 
-date: 
+author: By Adil Mezghouti
+date: `r format(Sys.time(), '%d %B, %Y')`
 
-First Slide
+Description
 ========================================================
 
-For more details on authoring R presentations click the
-**Help** button on the toolbar.
+This is a simple tool to configure a chart.
+It allows the following:
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Provides a name for the chart
+- Provides color options
+- Provides buckets slider
 
 Slide With Code
 ========================================================
 
 ```{r}
-summary(cars)
+x    <- faithful[, 2];
+bins <- seq(min(x), max(x), length.out = 100);
+hist(x, breaks = bins, col = 'green', border = 'white')
 ```
 
-Slide With Plot
+Slide With Hist
 ========================================================
 
 ```{r, echo=FALSE}
-plot(cars)
+x    <- faithful[, 2];
+bins <- seq(min(x), max(x), length.out = 100);
+hist(x, breaks = bins, col = 'green', border = 'white')
+
+```
+
+Resources
+========================================================
+```
+https://github.com/adilmezghouti/graphConfigurer
 ```
